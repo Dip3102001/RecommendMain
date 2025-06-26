@@ -57,8 +57,8 @@ async function startServer() {
     
     app.listen(PORT, () => {
       logger.info(`Server is running on port ${PORT}`);
-      console.log(`🚀 Server running at http://localhost:${PORT}`);
-      console.log(`📊 Health check: http://localhost:${PORT}/health`);
+      console.log(`Server running at http://localhost:${PORT}`);
+      console.log(`Health check: http://localhost:${PORT}/health`);
     });
   } catch (error) {
     logger.error('Unable to start server:', error);

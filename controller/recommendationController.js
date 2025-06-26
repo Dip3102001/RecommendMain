@@ -1,4 +1,5 @@
-const recommendationService = require('../services/recommendationService');
+import recommendationService from '../service/recommendationService';
+
 
 class RecommendationController {
   

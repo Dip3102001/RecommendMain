@@ -1,7 +1,7 @@
-const vectorService = require('./vectorService');
-const Product = require('../models/Product');
-const Transaction = require('../models/Transaction');
-const { Op } = require('sequelize');
+import vectorService from './vectorService';
+import Product from '../model/Product';
+import Op from 'sequelize';
+
 
 class RecommendationService {
   

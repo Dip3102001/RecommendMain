@@ -1,5 +1,10 @@
-const { QdrantClient } = require("@qdrant/js-client-rest");
+const { QdrantClient } = require("qdrant-client");
 require("dotenv").config();
+
+import {QdrantClient} from 'qdrant-client';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 // Initialize Qdrant client
 const qdrant = new QdrantClient({

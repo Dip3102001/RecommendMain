@@ -1,4 +1,5 @@
-const { Sequelize } = require('sequelize');
+import {Sequelize} from 'sequelize';
+
 require('dotenv').config();
 
 const sequelize = new Sequelize(process.env.PG_URL, {
@@ -17,3 +18,5 @@ const sequelize = new Sequelize(process.env.PG_URL, {
     }
   }
 });
+
+module.exports = sequelize;

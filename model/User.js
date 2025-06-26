@@ -1,7 +1,7 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+import { DataTypes } from 'sequelize';
+import sequelize from '../config/database';
 
-const Product = sequelize.define('Product', {
+const User = sequelize.define('User', {
   id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
@@ -10,24 +10,31 @@ const Product = sequelize.define('Product', {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
+    validate: {
+      notEmpty: true,
+      len: [2, 100],
+    },
   },
-  description: {
-    type: DataTypes.TEXT,
-  },
-  price: {
-    type: DataTypes.DECIMAL(10, 2),
-    allowNull: false,
-  },
-  category: {
+  email: {
     type: DataTypes.STRING,
     allowNull: false,
+    unique: true,
+    validate: {
+      isEmail: true,
+    },
   },
-  features: {
+  preferences: {
     type: DataTypes.JSONB,
     defaultValue: {},
   },
-  isActive: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: true,
+  createdAt: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+  },
+  updatedAt: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
   },
 });
+
+module.exports = User;

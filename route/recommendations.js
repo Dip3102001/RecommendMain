@@ -1,5 +1,6 @@
-const express = require('express');
-const recommendationController = require('../controller/recommendationController');
+import recommendationController from '../controller/recommendationController';
+import express from 'express';
+
 
 const router = express.Router();
 

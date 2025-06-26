@@ -17,6 +17,7 @@
     "joi": "^17.13.3",
     "pg": "^8.16.2",
     "pg-hstore": "^2.3.4",
-    "qdrant-client": "^0.0.1"
+    "qdrant-client": "^0.0.1",
+    "sequelize": "^6.37.7"
   }
 }
